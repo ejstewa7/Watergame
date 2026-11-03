@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fff200" />
+    <title>Water Quest | charity: water</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="https://www.charitywater.org/" target="_blank" rel="noreferrer" aria-label="charity: water home">
+        <span class="brand-mark" aria-hidden="true">cw</span>
+        <span>charity: water</span>
+      </a>
+      <button class="icon-button" id="soundButton" type="button" aria-label="Mute sound" title="Mute sound">
+        <span id="soundIcon" aria-hidden="true">♪</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="game-shell" aria-label="Water Quest game">
+        <div class="mission-panel">
+          <p class="eyebrow">THE WATER QUEST</p>
+          <h1>Every drop<br />changes lives.</h1>
+          <p class="mission-copy">Move the yellow bucket to catch clean water drops. Avoid falling cans and keep all three lives to chase a new high score.</p>
+
+          <div class="difficulty" aria-label="Choose difficulty">
+            <span>Difficulty</span>
+            <div class="segmented" role="group">
+              <button class="difficulty-button active" type="button" data-difficulty="easy">Easy</button>
+              <button class="difficulty-button" type="button" data-difficulty="normal">Medium</button>
+              <button class="difficulty-button" type="button" data-difficulty="hard">Hard</button>
+            </div>
+          </div>
+
+          <button class="primary-button" id="startButton" type="button">Start quest</button>
+        </div>
+
+        <div class="play-panel">
+          <div class="stats">
+            <div class="stat">
+              <span>Score</span>
+              <strong><span id="score">0</span>/<span id="goal">20</span></strong>
+            </div>
+            <div class="stat lives-stat">
+              <span>Lives</span>
+              <strong id="lives" aria-label="4 lives">♥ ♥ ♥ ♥</strong>
+            </div>
+            <div class="stat">
+              <span>Time</span>
+              <strong id="time">50s</strong>
+            </div>
+            <button class="reset-button" id="resetButton" type="button" aria-label="Reset game">Reset</button>
+          </div>
+
+          <div class="play-area" id="playArea">
+            <div class="start-overlay" id="startOverlay">
+              <div class="can-preview" aria-hidden="true"><span></span></div>
+              <p id="overlayText">Move the yellow bucket to catch clean water</p>
+            </div>
+          </div>
+
+          <div class="milestone" id="milestone" aria-live="polite">Mission ready</div>
+          <div class="touch-controls" aria-label="Touch movement controls">
+            <button id="leftButton" type="button" aria-label="Move left">←</button>
+            <button id="rightButton" type="button" aria-label="Move right">→</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Clean water changes everything.</p>
+      <nav aria-label="charity: water links">
+        <a href="https://www.charitywater.org/" target="_blank" rel="noreferrer">Learn about our work</a>
+        <a href="https://www.charitywater.org/donate" target="_blank" rel="noreferrer">Donate</a>
+      </nav>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
